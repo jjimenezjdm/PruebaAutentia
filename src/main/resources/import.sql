@@ -29,6 +29,3 @@ insert into curso (titulo, activo, nivel, horas, idProfesor) values ('Cassandra'
 insert into curso (titulo, activo, nivel, horas, idProfesor) values ('Android', 'true', 'básico', 2,1);
 insert into curso (titulo, activo, nivel, horas, idProfesor) values ('IOS', 'false', 'intermedio', 50,2);
 insert into curso (titulo, activo, nivel, horas, idProfesor) values ('Spark', 'true', 'experto', 150,2);
-
-
-

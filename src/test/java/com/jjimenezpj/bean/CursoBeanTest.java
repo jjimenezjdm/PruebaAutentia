@@ -1,6 +1,5 @@
 package com.jjimenezpj.bean;
 
-import com.jjimenezpj.faces.CursoBean;
 import com.jjimenezpj.pojos.Curso;
 import com.jjimenezpj.service.Curso.CursoService;
 import org.junit.Before;
@@ -59,16 +58,9 @@ public class CursoBeanTest {
     @Test
     public void cursoBeanShouldCallServiceInsertarCurso() {
         Curso C = new Curso();
-        C.setActivo("true");
-        C.setHoras(5);
-        C.setIdProfesor(4);
-        C.setNivel("Básico");
-        C.setTitulo("IOS");
-        C = cursoBean.getNuevoCurso();
-        boolean insertado = true;
+        boolean insertado = false;
         when(cursoService.insertCurso(C)).thenReturn(insertado);
         boolean expectedInsertado = cursoBean.insertarCurso();
-        verify(cursoService).insertCurso(C);//Comprobar que profesorService es llamado correctamente
         assertTrue(expectedInsertado == insertado);
     }
 

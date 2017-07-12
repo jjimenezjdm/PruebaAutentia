@@ -38,7 +38,7 @@
                 <h:outputLabel value="Horas "/>
                 <p:spinner min="1" max="999" size="3" value="#{cursoBean.nuevoCurso.horas}"/>
             </h:panelGrid>
-            <p:commandButton value="Añadir" action="#{cursoBean.insertarCurso()}" onclick="window.location.href='../index.jsf'"/>
+            <p:commandButton value="Añadir" action="#{cursoBean.insertarCurso()}"/>
         </h:form>
     </div>
 </h:body>

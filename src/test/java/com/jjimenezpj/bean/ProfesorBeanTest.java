@@ -1,6 +1,5 @@
 package com.jjimenezpj.bean;
 
-import com.jjimenezpj.faces.ProfesorBean;
 import com.jjimenezpj.pojos.Profesor;
 import com.jjimenezpj.service.Profesor.ProfesorService;
 import org.junit.Before;

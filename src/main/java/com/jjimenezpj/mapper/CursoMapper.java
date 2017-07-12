@@ -5,9 +5,11 @@ import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
+/**
+ * Interfaz que hace el mappeo de lo que "tengo" con la base de datos
+ */
 @Mapper
 public interface CursoMapper {
-
-	List<Curso> findByActive();
-	boolean insertCurso(Curso nuevoCurso);
+    List<Curso> findByActive();
+    boolean insertCurso(Curso nuevoCurso);
 }

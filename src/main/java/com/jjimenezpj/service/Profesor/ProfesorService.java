@@ -6,6 +6,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+/**
+ * Servicio de Profesor
+ */
 @Service("profesorService")
 public interface ProfesorService {
     @Transactional

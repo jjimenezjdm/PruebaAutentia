@@ -8,6 +8,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 
+/**
+ * Servicio de Curso
+ */
 @Service("cursoService")
 public interface CursoService {
     @Transactional

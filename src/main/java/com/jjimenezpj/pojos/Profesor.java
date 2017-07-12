@@ -1,6 +1,8 @@
 package com.jjimenezpj.pojos;
 
-public class Profesor {
+import java.io.Serializable;
+
+public class Profesor implements Serializable{
     private int id;
     private String nombre;
 
