@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+
+
+>
+
+<h:head>
+
+  <title>Prueba Autentia</title>
+</h:head>
+<h:body>
+  <div class="cabecera">
+    <h1>Catálogo de cursos</h1>
+  </div>
+  <div class="cuerpo">
+    <p:dataTable  var="curso" value="#{cursoBean.cursosActivos}" paginator="true" rows="5" paginatorTemplate="{RowsPerPageDropdown} {FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}" paginatorPosition="bottom">
+      <p:column headerText="TITULO" sortBy="#{curso.titulo}">
+        <h:outputText value="#{curso.titulo}" />
+      </p:column>
+
+      <p:column headerText="NIVEL">
+        <h:outputText value="#{curso.nivel}" />
+      </p:column>
+
+      <p:column headerText="HORAS">
+        <h:outputText value="#{curso.horas}" />
+      </p:column>
+    </p:dataTable>
+    <h:form>
+      <p:commandButton value="Nuevo curso" onclick="window.location.href= 'faces/altaCurso.jsf'"/>
+    </h:form>
+  </div>
+
+</h:body>
+</html>
+

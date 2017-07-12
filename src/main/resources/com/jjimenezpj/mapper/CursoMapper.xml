@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jjimenezpj.mapper.CursoMapper">
+
+    <select id="findByActive" resultType="Curso">
+        select * from cursodb.curso where activo = 'true'
+    </select>
+
+    <insert id="insertCurso" parameterType="com.jjimenezpj.pojos.Curso">
+        insert into cursodb.curso (titulo, activo, nivel, horas, idProfesor) values (#{titulo}, #{activo}, #{nivel}, #{horas}, #{idProfesor});
+    </insert>
+
+</mapper>

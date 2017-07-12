@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+>
+<h:head>
+    <title>Prueba Autentia</title>
+</h:head>
+<h:body>
+    <div class="cabecera">
+        <h1>Alta de cursos</h1>
+    </div>
+    <div class="cuerpo">
+       <h:form>
+            <h:panelGrid columns="2" cellpadding="5">
+                <h:outputLabel value="Activo "/>
+                <p:selectBooleanCheckbox id="selectBooleanCheckbox" value="#{cursoBean.nuevoCurso.activo}"/>
+
+                <p:outputLabel for="ProfesorMenu" value="Profesor"/>
+                <p:selectOneMenu id="ProfesorMenu" value="#{cursoBean.nuevoCurso.idProfesor}">
+                    <f:selectItems value="#{profesorBean.getAllProfesor()}"
+                                   var="profesor" itemLabel="#{profesor.nombre}" itemValue="#{profesor.id}" />
+                </p:selectOneMenu>
+
+                <h:outputLabel value="Título "/>
+                <p:inputText id="basic" value="#{cursoBean.nuevoCurso.titulo}"/>
+
+                <p:outputLabel for="nivel" value="Nivel" />
+                <p:selectOneMenu id="nivel" value="#{cursoBean.nuevoCurso.nivel}">
+                    <f:selectItem itemLabel="Básico" itemValue="Básico"/>
+                    <f:selectItem itemLabel="Intermedio" itemValue="Intermedio"/>
+                    <f:selectItem itemLabel="Avanzado" itemValue="Avanzado"/>
+                </p:selectOneMenu>
+
+                <h:outputLabel value="Horas "/>
+                <p:spinner min="1" max="999" size="3" value="#{cursoBean.nuevoCurso.horas}"/>
+            </h:panelGrid>
+            <p:commandButton value="Añadir" action="#{cursoBean.insertarCurso()}" onclick="window.location.href='../index.jsf'"/>
+        </h:form>
+    </div>
+</h:body>
+</html>
