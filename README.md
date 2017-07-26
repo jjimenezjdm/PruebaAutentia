@@ -1,4 +1,4 @@
-# Autentia
+# Spring-MyBatis-JSF2
 
 ## Descripción del proyecto
 
