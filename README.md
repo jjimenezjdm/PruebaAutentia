@@ -2,8 +2,6 @@
 
 ## Descripción del proyecto
 
-Proyecto realizado como parte del proceso de selección de Autentia.
-
 Se ha implementado una pequeña web usando Spring, MyBatis y PrimeFaces que permite listar y crear cursos.
 
 ### Requisitos implementados
