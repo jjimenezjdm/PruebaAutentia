@@ -13,7 +13,7 @@ import java.util.List;
  */
 @Service("cursoService")
 public interface CursoService {
-    @Transactional
+    @Transactional //BBDD
     boolean insertCurso(Curso curso);
     @Transactional
     List<Curso> getCursosActivos();
